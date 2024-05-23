@@ -24,19 +24,45 @@
             </LinearGradientBrush>
         </Canvas.Background>
         <ListView
-            Height="266"
-            Width="530"
+            x:Name="lvCharters"
+            Height="337"
+            Width="595"
             d:ItemsSource="{d:SampleData ItemCount=10}"
-            HorizontalAlignment="Left"
-            Canvas.Top="84"
-            VerticalAlignment="Center"
-            Canvas.Left="114">
+            HorizontalAlignment="Center"
+            Canvas.Top="30"
+            VerticalAlignment="Top"
+            Canvas.Left="92">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn />
+                    <!--Header = displays on top of the colum displayingMemberBinding = "Binding Property"-->
+                    <GridViewColumn
+                        Header="Player Name"
+                        DisplayMemberBinding="{Binding PlayerName}" />
+                    <GridViewColumn
+                        Header="Character Name"
+                        DisplayMemberBinding="{Binding CharacterName}" />
+                    <GridViewColumn
+                        Header="Intelligence"
+                        DisplayMemberBinding="{Binding Intelligence}" />
+                    <GridViewColumn
+                        Header="Constitution"
+                        DisplayMemberBinding="{Binding Constitution}" />
+                    <GridViewColumn
+                        Header="Hacking"
+                        DisplayMemberBinding="{Binding Hacking}" />
+                    <GridViewColumn
+                        Header="WillPower"
+                        DisplayMemberBinding="{Binding WillPower}" />
+
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button
+            x:Name="btnDisplayInfo"
+            Content="Display Information"
+            Canvas.Left="29"
+            Canvas.Top="394"
+            Click="btnDisplayInfo_Click" />
 
     </Canvas>
 </Window>
