@@ -48,5 +48,28 @@ namespace Prog122_L12_Notes_Week8
 
             
         }
+
+        private void btnRemoveCharacter_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedIndex = lvCharters.SelectedIndex;
+            if(lvCharters.SelectedIndex != -1)
+            {
+                characterNames.Remove(characterNames[selectedIndex]);
+                lvCharters.Items.Refresh();
+
+            }
+            else
+            {
+                MessageBox.Show("Select a row from the list view");
+            }
+
+        }
+
+        private void btnEditIntelligence_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedIndex = lvCharters.SelectedIndex;
+            characterNames[selectedIndex].Intelligence = 20;
+            lvCharters.Items.Refresh();
+        }
     }//End of class
 }//End of namespace

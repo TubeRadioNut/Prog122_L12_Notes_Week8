@@ -63,6 +63,22 @@
             Canvas.Left="29"
             Canvas.Top="394"
             Click="btnDisplayInfo_Click" />
+        <Button
+            x:Name="btnRemoveCharacter"
+            Content="Remove Character"
+            Canvas.Left="681"
+            Canvas.Top="394"
+            Click="btnRemoveCharacter_Click"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+        <Button
+            x:Name="btnEditIntelligence"
+            Content="Edit Intelligence"
+            Canvas.Left="561"
+            Canvas.Top="394"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Click="btnEditIntelligence_Click" />
 
     </Canvas>
 </Window>
